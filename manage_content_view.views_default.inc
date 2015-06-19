@@ -494,7 +494,7 @@ function manage_content_view_views_default_views() {
     'image_style' => 'square_thumbnail',
     'image_link' => '',
   );
-  /* Field: Content: Files */
+  /* Field: Asset: File */
   $handler->display->display_options['fields']['field_file']['id'] = 'field_file';
   $handler->display->display_options['fields']['field_file']['table'] = 'field_data_field_file';
   $handler->display->display_options['fields']['field_file']['field'] = 'field_file';
@@ -503,12 +503,15 @@ function manage_content_view_views_default_views() {
   $handler->display->display_options['fields']['field_file']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_file']['empty'] = '<i class="fa fa-file"></i>';
   $handler->display->display_options['fields']['field_file']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_file']['click_sort_column'] = 'target_id';
+  $handler->display->display_options['fields']['field_file']['type'] = 'entityreference_label';
   $handler->display->display_options['fields']['field_file']['settings'] = array(
     'link' => 0,
   );
+  $handler->display->display_options['fields']['field_file']['group_column'] = 'target_id';
   $handler->display->display_options['fields']['field_file']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_file']['delta_offset'] = '0';
-  /* Field: Content: Videos */
+  /* Field: Asset: Video */
   $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
   $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
   $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
@@ -519,9 +522,12 @@ function manage_content_view_views_default_views() {
   $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_video']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'target_id';
+  $handler->display->display_options['fields']['field_video']['type'] = 'entityreference_label';
   $handler->display->display_options['fields']['field_video']['settings'] = array(
     'link' => 0,
   );
+  $handler->display->display_options['fields']['field_video']['group_column'] = 'target_id';
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
